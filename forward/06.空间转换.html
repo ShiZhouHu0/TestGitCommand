@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        margin: 100px auto;
+        perspective: 800px;
+        transform-style: preserve-3d;
+        border: 1px solid #000;
+        overflow: hidden;
+        width: 400px;
+        /* text-align: center; */
+      }
+      ul > li {
+        float: left;
+        padding: 0 30px;
+        background-color: lightgreen;
+        border: 1px solid white;
+        transition: all .5s;
+      }
+
+      ul > li:hover {
+        /* background-color: red; */
+        /* transform: translate3d(0,0,15px) */
+        transform:rotateY(180deg) ;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>首页</li>
+      <li>登录登录登录登录</li>
+      <li>导航</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div > ul::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      ul {
+        list-style: none;
+        /* margin-top: 100px; */
+      }
+
+      ul > li {
+        float: left;
+        border-right: 1px solid lightgrey;
+        border-bottom: 1px solid lightgrey;
+        border-top: 1px solid lightgrey;
+
+        height: 40px;
+        padding: 0 60px;
+        text-align: center;
+      }
+
+      ul > li > a {
+        text-decoration: none;
+        color: black;
+        line-height: 40px;
+      }
+
+      ul > li:nth-child(1) {
+        border-left: 1px solid lightgrey;
+      }
+
+      ul img {
+        width: 80px;
+        height: 80px;
+      }
+
+      ul > li:nth-child(4) a:hover ~ div {
+        display: block;
+      }
+
+      ul > li:nth-child(4) div {
+        display: none;
+        position: relative;
+      }
+
+      .fullscreen { 
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fullscreen">
+      <ul class="root">
+        <li><a href="javascript:void(0)">我要投资</a></li>
+        <li><a href="javascript:void(0)">平台介绍</a></li>
+        <li><a href="javascript:void(0)">新手专区</a></li>
+        <li>
+          <a href="javascript:void(0)">手机微金所</a>
+          <div style="text-align: left">
+            <img
+              src="./public/luodedao.jpg"
+              alt=""
+              style="vertical-align: middle"
+            />
+          </div>
+        </li>
+        <li><a href="javascript:void(0)">个人中心</a></li>
+      </ul>
+    </div>
+    <p>
+      我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字我是一段文字
+    </p>
+    <button>点击我，崽种</button>
+
+    <script>
+      let fullscrren = document.querySelector(".fullscreen");
+      let button = document.querySelector("button");
+      button.addEventListener("click", () => {
+        fullscrren.requestFullscreen();
+      });
+    </script>
+  </body>
+</html>

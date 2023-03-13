@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 100px;
+        background-color: pink;
+        animation: animation 2s forwards;
+      }
+      .box2 {
+        width: 300px;
+        height: 100px;
+        background-color: pink;
+        animation: animation2 2s forwards;
+      }
+      @keyframes animation {
+        from {
+          width: 300px;
+        }
+        to {
+          width: 800px;
+        }
+      }
+
+      @keyframes animation2 {
+        from {
+          width: 800px;
+        }
+        to {
+          width: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <button class="changebuttonstate">惦记我栽种</button>
+    <script>
+      let box = document.querySelector(".box");
+      const btn = document.querySelector(".changebuttonstate");
+      btn.addEventListener("click", (params) => {
+        box.classList.toggle("box2");
+      });
+    </script>
+  </body>
+</html>

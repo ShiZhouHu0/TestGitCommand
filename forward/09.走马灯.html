@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .parent {
+      width: 600px;
+      height: 300px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .parent img {
+      width: 600px;
+      height: 300px;
+    }
+    .parent ul {
+      list-style: none;
+      width: 3600px;
+      animation: ulmove 6s infinite linear;
+    }
+    .parent ul > li {
+      float: left;
+    }
+
+    @keyframes ulmove {
+        to{
+            transform: translateX(-3000px);
+        }
+    }
+  </style>
+  <body>
+    <div class="parent">
+      <ul>
+        <li><img src="../public/amiya.jpeg" alt="" /></li>
+        <li><img src="../public/amiya2.jpg" alt="" /></li>
+        <li><img src="../public/amiya3.jpeg" alt="" /></li>
+        <li><img src="../public/luodedao.jpg" alt="" /></li>
+        <li><img src="../public/shanling.jpg" alt="" /></li>
+        <li><img src="../public/amiya.jpeg" alt="" /></li>
+      </ul>
+    </div>
+  </body>
+</html>

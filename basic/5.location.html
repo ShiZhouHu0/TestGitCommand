@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .testbox {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(100, 100, 100);
+        /* relative box */
+        /* position: relative;
+        left: 30px;
+        top: 30px; */
+
+        /* absolute box */
+        position: absolute;
+        left: 30px;
+        top: 30px;
+
+        /* fixed box */
+        /* position: fixed;
+        left: 30px;
+        top: 30px; */
+      }
+
+      .parent {
+        width: 400px;
+        height: 400px;
+        background: rgb(255, 150, 150);
+        position: relative;
+      }
+
+      .floatbox {
+        width: 500px;
+        height: 500px;
+        background-color: rgb(250, 250, 0);
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="firstp">我是一个用来站位的span，我可以测试定位效果</p>
+    <!-- relative position: offeset relative to itself  -->
+    <div class="parent">
+      <div class="testbox">relative box test</div>
+    </div>
+
+    <div class="floatbox"></div>
+    <p class="firstp">我是一个用来站位的span，我可以测试定位效果</p>
+    <script>
+      let relativeBox = document.querySelector(".firstp");
+      for (let index = 0; index < 10; index++) {
+        let pEle = document.createElement("p");
+        pEle.innerHTML = `<span>我是一个用来站位的span，我可以测试定位效果</span>`;
+        pEle.classList.add("placeholderele");
+        document.body.insertBefore(pEle, relativeBox);
+      }
+      let firstPEle = document.querySelector(".firstp");
+      for (let index = 0; index < 20; index++) {
+        let pEle = document.createElement("p");
+        pEle.innerHTML = `<span>我是一个用来站位的span，我可以测试定位效果</span>`;
+        pEle.classList.add("placeholderele");
+        document.body.append(pEle, firstPEle);
+      }
+    </script>
+  </body>
+</html>
